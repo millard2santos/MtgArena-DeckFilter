@@ -1,4 +1,34 @@
+const decksNumber = document.querySelector('input')
+const button = document.querySelector('button')
+const body = document.querySelector('body')
+
+button.addEventListener('click', () => {
+    console.log(decksNumber.value);
+    // const form = document.createElement('form')
+    // for(i = 1; i<=decksNumber.value;i++){
+    //     const inputDeck = document.createElement('input')
+    //     inputDeck.name = 'deck' + i
+    //     inputDeck.type = 'text'
+    //     form.append(inputDeck)
+      
+    // }
+    // const submit = document.createElement('input')
+    // submit.type = 'submit'
+    // submit.value = 'Compare'
+    // form.append(submit)
+    
+    // body.append(form)
+    
+})
+const form = document.querySelector('form')
+
+
 const allDecks = []
+
+// form.addEventListener('submit', (event)=> {
+//     event.preventDefault()
+
+// })
 
 let deck1 = `Deck
 4 Lunarch Veteran
@@ -53,26 +83,32 @@ const deck2 = `Deck
 
 
 
-let finalDeck1 = deck1.replace('Sideboard','').replace('Deck','')
-finalDeck1 = finalDeck1.split('\n')
-finalDeck1 = finalDeck1.filter(cards => cards !== '')
 
 
-let finalDeck2 = deck2.replace('Sideboard','').replace('Deck','')
-finalDeck2 = finalDeck2.split('\n')
-finalDeck2 = finalDeck2.filter(cards => cards !== '')
-
-let shownDeck=[]
-
-allDecks.push(finalDeck1,finalDeck2)
-allDecks.forEach((decks)=> {
-    decks.forEach(cards=>{
-        if(!shownDeck.includes(cards.slice(cards.indexOf(' ')+1))){
-            shownDeck.push(cards.slice(cards.indexOf(' ') + 1))
-        }
+const stapleCards = (list) => {
+    const staples=[]
+    const allDecks=[]
+    list.forEach(elements => {
+        allDecks.push(elements.replace('Sideboard','').replace('Deck','').split('\n').filter(elements=> elements !== ''))
     })
-})
+    allDecks.forEach((decks)=> {
+        decks.forEach(cards=>{
+            if(!staples.includes(cards.slice(cards.indexOf(' ')+1))){
+                staples.push(cards.slice(cards.indexOf(' ') + 1))
+            }
+        })
+    })
+    return staples
+}
 
 
 
-console.log(shownDeck);
+
+
+
+
+
+
+
+
+console.log();
