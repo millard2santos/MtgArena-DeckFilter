@@ -1,5 +1,26 @@
 {
   "dependencies": {
     "mtgsdk": "^1.0.0"
-  }
+  },
+  "name": "mtgarena-deckfilter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "tailwindcss": "^3.2.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/millard2santos/MtgArena-DeckFilter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/millard2santos/MtgArena-DeckFilter/issues"
+  },
+  "homepage": "https://github.com/millard2santos/MtgArena-DeckFilter#readme",
+  "description": ""
 }
